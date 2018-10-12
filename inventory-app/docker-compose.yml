@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  inventory-app:
+    container_name: inventory-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '4200:4200'
